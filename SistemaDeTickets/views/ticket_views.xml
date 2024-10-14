@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+
+    <!-- Vista de lista (árbol) para Tickets -->
+    <record id="view_ticket_tree" model="ir.ui.view">
+        <field name="name">ticket.system.tree</field>
+        <field name="model">ticket.system</field>
+        <field name="arch" type="xml">
+            <tree string="Tickets">
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="user_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para Tickets -->
+    <record id="view_ticket_form" model="ir.ui.view">
+        <field name="name">ticket.system.form</field>
+        <field name="model">ticket.system</field>
+        <field name="arch" type="xml">
+            <form string="Ticket">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="category_id"/>
+                        <field name="user_id"/>
+                        <field name="state" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Historial">
+                            <field name="history_ids">
+                                <tree>
+                                    <field name="message"/>
+                                    <field name="create_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de lista (árbol) para Categorías -->
+    <record id="view_ticket_category_tree" model="ir.ui.view">
+        <field name="name">ticket.category.tree</field>
+        <field name="model">ticket.category</field>
+        <field name="arch" type="xml">
+            <tree string="Categorías">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para Categorías -->
+    <record id="view_ticket_category_form" model="ir.ui.view">
+        <field name="name">ticket.category.form</field>
+        <field name="model">ticket.category</field>
+        <field name="arch" type="xml">
+            <form string="Categoría">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para las Categorías -->
+    <record id="action_ticket_category" model="ir.actions.act_window">
+        <field name="name">Categorías</field>
+        <field name="res_model">ticket.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Vista de acción para el menú -->
+    <record id="action_ticket_system" model="ir.actions.act_window">
+        <field name="name">Tickets</field>
+        <field name="res_model">ticket.system</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
