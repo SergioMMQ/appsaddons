@@ -14,6 +14,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/ticket_views.xml',
+        'views/ticket_menu.xml',
     ],
     'installable': True,
     'application': True,

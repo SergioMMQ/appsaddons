@@ -6,6 +6,7 @@
         <menuitem 
             id="menu_ticket_root" 
             name="Sistema de Tickets" 
+            web_icon="SistemaDeTickets,static/description/icon.png" 
             sequence="10"/>
         <menuitem 
             id="menu_ticket_system" 
