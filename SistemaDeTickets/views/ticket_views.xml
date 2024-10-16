@@ -6,7 +6,10 @@
         <field name="name">ticket.system.kanban</field>
         <field name="model">ticket.system</field>
         <field name="arch" type="xml">
-            <kanban string="Tickets" default_group_by="state">
+            <kanban string="Tickets" 
+                    default_group_by="state"
+                    class="o_kanban_small_column"
+                    sample="1">
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
@@ -50,10 +53,10 @@
         <field name="model">ticket.system</field>
         <field name="arch" type="xml">
             <tree string="Tickets">
+                <field name="state" widget="statusbar"/>
                 <field name="name"/>
                 <field name="category_id"/>
                 <field name="user_id"/>
-                 <field name="state" widget="statusbar" />
             </tree>
         </field>
     </record>
@@ -66,14 +69,17 @@
             <form string="Ticket">
                 <header>
                     <field name="state" widget="statusbar"/>
-                    </header>
+                    <button name="action_progress" type="object" string="En Progreso" class="btn-primary"/>
+                    <button name="action_close" type="object" string="Cerrado" class="btn-secondary"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="name"/>
                         <field name="description"/>
                         <field name="category_id"/>
                         <field name="user_id"/>
-                        <field name="state" readonly="1"/>
+                        
+                        <field name="state"/>
                     </group>
                     <notebook>
                         <page string="Historial">
