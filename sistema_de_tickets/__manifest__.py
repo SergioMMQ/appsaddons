@@ -23,4 +23,5 @@
     'images': ['static/description/icon.png'],  
     'price': 90,
     'currency': 'USD',
+    'support': 'quetzal.mq97@gmail.com',
 }
