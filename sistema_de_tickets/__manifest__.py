@@ -21,6 +21,6 @@
     'application': True,
     'license': 'LGPL-3',
     'images': ['sistema_de_tickets,static/description/icon.png'],  
-    'price': 90,
+    'price': 50,
     'currency': 'USD',
 }
