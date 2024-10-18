@@ -1,3 +1,4 @@
+
 # Sistema de Tickets - Odoo Module
 
 ## Descripción
@@ -11,18 +12,17 @@ El **Sistema de Tickets** es un módulo desarrollado para gestionar solicitudes,
 - **Historial de Actividades**: Registro de actividades del ticket con la posibilidad de agregar mensajes e imágenes.
 - **Categorías de Tickets**: Organización de tickets por categorías para una mejor clasificación.
 - **Interfaz de Usuario Amigable**: Interfaces intuitivas para gestionar tickets y ver el historial de actividades.
+- **Compatibilidad**: Compatible con Odoo 17.
 
 ## Instalación
 
-**Contacto**
-    -Sergio Martínez Meneses
-    -Email: [quetzal.mq97@gmail.com]
-    -Website: 🔗https://sergiommq.github.io/portafolio/
+### Requisitos Previos
+- Odoo 17 instalado.
+- Permisos para agregar módulos personalizados.
 
-
-. **Instalar el módulo**:
+1. **Instalar el módulo**:
     - Busca "Sistema de Tickets" y haz clic en `Instalar`.
-. **Actualizar la lista de módulos**:
+2. **Actualizar la lista de módulos**:
     - Ve al menú de aplicaciones en Odoo.
     - Haz clic en `Actualizar lista de aplicaciones`.
 
@@ -46,18 +46,22 @@ El **Sistema de Tickets** es un módulo desarrollado para gestionar solicitudes,
     - **Cancelado**: Tickets que han sido cancelados.
     - **Reabierto**: Tickets que fueron cerrados pero que necesitan ser revisados de nuevo.
 
-
 ## Licencia
+Este software se distribuye bajo la **Licencia LGPL (Lesser General Public License)**. Para más detalles, consulta el archivo [LICENSE](./LICENSE).
 
-## Licencia LGPL
+## Contacto
+**Sergio Martínez Meneses**  
+**Email:** [quetzal.mq97@gmail.com]  
+**Website:** [https://sergiommq.github.io/portafolio/](https://sergiommq.github.io/portafolio/)
 
-Este software se distribuye bajo la **Licencia LGPL (Lesser General Public License)**. Esto significa que:
+## Historial de Versiones
+### Versión 1.0.0
+- Lanzamiento inicial con las siguientes funcionalidades:
+  - Gestión de tickets.
+  - Flujo de trabajo de estados.
+  - Historial de actividades con soporte para imágenes.
 
-1. **Uso Libre**: Puedes usar este software de forma gratuita, tanto en proyectos personales como comerciales.
-2. **Modificaciones**: Se permite la modificación del código fuente. Sin embargo, cualquier modificación realizada al software debe ser publicada bajo la misma licencia LGPL.
-3. **Redistribución**: Puedes redistribuir el software, ya sea en su forma original o modificado, siempre que se incluya el texto de la licencia LGPL y se proporcione el código fuente o la forma de obtenerlo.
-4. **Integración con Software Propietario**: Puedes enlazar este software con tu propio software propietario sin necesidad de liberar tu código fuente, siempre que no modifiques el código LGPL original.
-5. **No hay Garantías**: Este software se proporciona "tal cual", sin garantía de ningún tipo. El uso del software es bajo tu propio riesgo.
 
-Para más detalles, consulta el archivo `LICENSE` incluido en este repositorio.
-
+# -*- coding: utf-8 -*-
+# © 2024 Sergio Martínez Meneses
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.html).
